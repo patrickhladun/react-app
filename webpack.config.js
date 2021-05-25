@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -21,6 +22,12 @@ module.exports = {
             },
        ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/views/index.html",
+            filename: "./index.html",
+        })
+    ],
     devServer: {
         contentBase: path.join(__dirname, 'public'),
         historyApiFallback: true,
