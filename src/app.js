@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 const App = () => {
     return(
-        <h1>Node API User Authentication</h1>
+        <Fragment>
+            <h1>Node API User Authentication</h1>
+            <Dashboard />
+        </Fragment>
     );
 }
 
